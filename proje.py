@@ -15,8 +15,12 @@ def basit_rag_sistemi(soru, dokumanlar):
     en_iyi_icerik = None
     en_yuksek_skor = 0
     
-    soru_kelimeleri = soru.lower().split()
+    # Soruyu küçük harfe çevir ve kelimelerine ayır
+    soru_kelimeleri = soru.lower().strip().split()
     
+    if not soru_kelimeleri:
+        return None, "Lütfen bir soru yazın."
+
     for dosya, icerik in dokumanlar.items():
         satirlar = icerik.split('\n')
         
@@ -24,12 +28,20 @@ def basit_rag_sistemi(soru, dokumanlar):
             if not satir.strip():
                 continue
             
-            satir_skoru = sum(1 for kelime in soru_kelimeleri if kelime in satir.lower())
+            # Satırı da küçük harfe çevirerek arama yapıyoruz (Büyük/küçük harf hatasını çözer)
+            satir_lower = satir.lower()
+            satir_skor = 0
             
-            if satir_skoru > en_yuksek_skor:
-                en_yuksek_skor = satir_skoru
+            for kelime in soru_kelimeleri:
+                # Kelime satırın içinde herhangi bir yerde geçiyorsa skor ver
+                if kelime in satir_lower:
+                    satir_skor += 1
+            
+            if satir_skor > en_yuksek_skor:
+                en_yuksek_skor = satir_skor
                 en_iyi_dokuman = dosya
                 
+                # İlgili satırı ve sonraki 3 satırı birleştir
                 cevap_blok = satirlar[idx:idx+4]
                 en_iyi_icerik = "\n".join([s.strip() for s in cevap_blok if s.strip()])
                 
