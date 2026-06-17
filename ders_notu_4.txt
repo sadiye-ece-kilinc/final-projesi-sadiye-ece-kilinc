@@ -1,0 +1,2 @@
+Ağaç Veri Yapıları:
+Ağaçlar hiyerarşik yapılardır. En tepedeki ilk elemana kök adı verilir. İkili arama ağacında bir elemanın en fazla iki tane alt elemanı olabilir. Kurba kural olarak sol tarafa küçük olan sayılar, sağ tarafa ise büyük olan sayılar yazılır. Ağacın üzerinde yukarıdan aşağıya doğru arama yapılır.

@@ -1,0 +1,2 @@
+Bağlı Listeler:
+Bağlı listelerde elemanlar bellekte yan yana durmazlar. Her elemana düğüm denir. Bir düğümün içinde hem kendi verisi olur hem de kendinden sonra gelen diğer düğümün adresi bulunur. Tek yönlü bağlı listelerde sadece ileri doğru gidilebilir. Araya eleman eklemek veya bir elemanı silmek işaretçileri kaydırarak kolayca yapılır.

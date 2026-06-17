@@ -1,0 +1,2 @@
+Graf Yapıları:
+Graflar düğümlerden ve bu düğümleri birbirine bağlayan çizgilerden oluşan bir yapıdır. Doğrusal değildir, her düğüm her yere bağlanabilir. İki nokta arasındaki en kısa yolu bulmak için Dijkstra algoritması diye bir yöntem kullanılır. Haritalarda yol tarifi yaparken bu mantık kullanılır.

@@ -1,0 +1,2 @@
+Veri Yapılarına Giriş ve Algoritma Analizi:
+Veri yapısı verilerin bilgisayarda saklanma şeklidir. Algoritma analizi ise bir kodun ne kadar hafıza harcadığını ve ne kadar sürede çalıştığını bulmak için yapılır. Karmaşıklık hesabı için Big-O yöntemi kullanılır. Mesela düz bir döngü varsa bu n kadar zaman alır. İç içe döngüler varsa süre daha çok uzar ve karesi şeklinde artar.

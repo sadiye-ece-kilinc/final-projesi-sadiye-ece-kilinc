@@ -1,0 +1,2 @@
+Yığın ve Kuyruk Yapıları:
+Yığın yapısı son giren ilk çıkar mantığıyla çalışır. Mesela üst üste dizilen tabaklar gibidir, en son koyduğunu ilk alırsın. Eleman eklemeye push, çıkarmaya pop denir. Kuyruk yapısı ise ilk gelen ilk çıkar mantığıdır. Sıra bekleyen insanlar gibidir. Eleman eklemeye enqueue, çıkarmaya dequeue denir.
