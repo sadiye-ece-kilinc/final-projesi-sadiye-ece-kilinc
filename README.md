@@ -3,17 +3,15 @@
 ##  1. Proje Hakkında Genel Bakış ve Yönetici Özeti
 Bu proje, üniversite ve akademi öğrencilerinin vizeler ile finaller öncesinde karmaşık, yüzlerce sayfalık ders notları, slayd çıktıları ve PDF dokümanları arasında aradıkları nokta atışı bilgilere ulaşamaması problemine kesin bir çözüm üretmek üzere tasarlanmıştır. 
 
-Klasik yapay zekâ sohbet robotları (ChatGPT, Gemini vb.) doğrudan kendilerine yüklenmeyen veriler hakkında konuşurken dış dünyadan uydurma bilgiler üretebilmekte ve akademik süreçlerde öğrencileri yanlış yönlendirebilmektedir (Halüsinasyon Problemi). Bu proje, bu büyük riskin önüne geçebilmek amacıyla **Retrieval-Augmented Generation (RAG)** mimarisinin yerel (local) bir simülasyonunu ayağa kaldırmaktadır. 
+Klasik yapay zekâ sohbet robotları (ChatGPT, Gemini vb.) doğrudan kendilerine yüklenmeyen veriler hakkında konuşurken dış dünyadan uydurma bilgiler üretebilmekte ve akademik süreçlerde öğrencileri yanlış yönlendirebilmektedir (Halüsinasyon Problemi). Bu proje, bu büyük riskin önüne geçebilmek amacıyla (RAG) mimarisinin yerel bir simülasyonunu ayağa kaldırmaktadır. 
 
 Sistem, dış dünyayla tüm bağlarını kopararak sadece geliştiricinin veya öğrencinin sisteme beslediği **5 farklı ders notu havuzunu (`ders_notu_1.txt` ... `ders_notu_5.txt`)** baz alır. Kullanıcı bir sorgu girdiğinde, sistem ilgili dokümanları satır satır tarar, anlamsal bütünlüğü koruyarak veriyi ekrana basar. Eğer bilgi kaynak dokümanlarda yoksa uydurma bilgi üretmek yerine güvenli tarafta kalıp kullanıcıyı uyarır.
 
----
-
 ##  2. Detaylı Proje Dosya Yapısı ve Dizin Ağacı Açıklamaları
 
-Proje dizin mimarisi, modüler yazılım geliştirme prensiplerine ve temiz kod (clean code) standartlarına uygun olarak tasarlanmıştır. Dizin yapısının detaylı görünümü ve her bir dosyanın üstlendiği görev şu şekildedir:
+Proje dizin mimarisi, modüler yazılım geliştirme prensiplerine ve temiz kod standartlarına uygun olarak tasarlanmıştır. Dizin yapısının detaylı görünümü ve her bir dosyanın üstlendiği görev şu şekildedir:
 
-```text
+text
 final-projesi/
 │
 ├── ders_notu_1.txt       # RAG (Retrieval-Augmented Generation) Nedir?, Temel Kavramlar Dokümanı
